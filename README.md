@@ -37,4 +37,6 @@ ER図：作成中
 - IDE：Cloud9
 
 ## 使用素材
-- フリー画像など持ってくる
+- <https://pixabay.com/ja/> pixabay高画質のフリー画像
+- 
+
