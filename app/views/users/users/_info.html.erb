@@ -1,0 +1,17 @@
+<table class='table'>
+  <tr><%= attachment_image_tag(user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg") %></tr>
+  <tr>
+	  <th><p>name</p></th>
+	  <th><p><%= user.name %></p></th>
+  </tr>
+  <tr>
+	  <th><p>introduction</p></th>
+	  <th><p><%= user.introduction %></p></th>
+  </tr>
+  <tr>
+
+</table>
+
+<div class='row'>
+  <%= link_to '',edit_user_path(user),class: "btn btn-outline-secondary btn-block fas fa-user-cog edit_user_#{user.id}" %>
+</div>

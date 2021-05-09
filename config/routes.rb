@@ -2,7 +2,16 @@ Rails.application.routes.draw do
   root 'homes#top'
   get 'homes/about'
   devise_for :admins
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  devise_for :users,:controllers => {
+      :sessions => "users/sessions",
+      :registrations => "users/registrations",
+      :passwords => "users/passwords",
+    }
+
+  scope module: :users do
+    resources :users, only: [:index, :show, :edit]
+  end
+
+  resources :post_images, only: [:new, :create, :index, :show, :destroy]
 end
