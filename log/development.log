@@ -6633,3 +6633,479 @@ puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
 puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 133.200.178.64 at 2021-05-11 02:14:13 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 456ms (Views: 446.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 133.200.178.64 at 2021-05-11 02:14:15 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (32.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/post_images" for 133.200.178.64 at 2021-05-11 02:14:19 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/users/post_images/_index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  Rendered users/post_images/_index.html.erb (32.6ms)
+  Rendered users/post_images/index.html.erb within layouts/application (34.5ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<PostImage::ActiveRecord_Relation:0x00000000042f8588>):
+    23:     </div>
+    24:   </div>
+    25:   <% end %>
+    26:   <%= paginate post_images %>
+    27: </div>
+  
+app/views/users/post_images/_index.html.erb:26:in `_app_views_users_post_images__index_html_erb__200761662575774647_70010889069560'
+app/views/users/post_images/index.html.erb:1:in `_app_views_users_post_images_index_html_erb__2335965516893025325_70010888411700'
+Started GET "/" for 133.200.178.64 at 2021-05-11 02:14:26 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 133.200.178.64 at 2021-05-11 02:14:28 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/users_controller.rb:6
+  Rendering users/users/show.html.erb within layouts/application
+  Rendered users/users/_info.html.erb (2.1ms)
+  Rendered users/post_images/_form.html.erb (17.1ms)
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."user_id" = ? ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  Rendered users/post_images/_index.html.erb (8.2ms)
+  Rendered users/users/show.html.erb within layouts/application (32.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 61.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/attachments/24e8115d799537e96b71b955e85ae97ecd9c23a7/store/a8c457cb86d509fbd72c04f1f303a986a7dc97296a3d9c80acf8404608f1/image" for 133.200.178.64 at 2021-05-11 02:14:28 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/58f3fc24ea1903caaeda42387d0d93939039ab8d/store/3375e3fc7f775a984cefd3047895fe03f29daec16629bfabf0ab362a75f9/image" for 133.200.178.64 at 2021-05-11 02:14:28 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/d2d906dcf322f00b27d6719f914acda9b717ded2/store/39b7c05f2f298058c1bfae70660ddf31fe96e38d66e30a8ad5170b005eb9/image" for 133.200.178.64 at 2021-05-11 02:14:28 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/814ff118769acc39d66aa77fc9b21802f027df29/store/ae9fcf7dacc65ae2fe3a1be1268a81cd405ea2242c5db9990b3dcfaf4ce7/image" for 133.200.178.64 at 2021-05-11 02:14:28 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-05-11 02:14:28 +0000] GET "/814ff118769acc39d66aa77fc9b21802f027df29/store/ae9fcf7dacc65ae2fe3a1be1268a81cd405ea2242c5db9990b3dcfaf4ce7/image" 200 7.3ms
+
+Refile::App: [2021-05-11 02:14:28 +0000] GET "/d2d906dcf322f00b27d6719f914acda9b717ded2/store/39b7c05f2f298058c1bfae70660ddf31fe96e38d66e30a8ad5170b005eb9/image" 200 10.8ms
+
+Refile::App: [2021-05-11 02:14:28 +0000] GET "/24e8115d799537e96b71b955e85ae97ecd9c23a7/store/a8c457cb86d509fbd72c04f1f303a986a7dc97296a3d9c80acf8404608f1/image" 200 20.3ms
+
+Refile::App: [2021-05-11 02:14:28 +0000] GET "/58f3fc24ea1903caaeda42387d0d93939039ab8d/store/3375e3fc7f775a984cefd3047895fe03f29daec16629bfabf0ab362a75f9/image" 200 44.7ms
+
+Started GET "/post_images/4" for 133.200.178.64 at 2021-05-11 02:14:46 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  Rendered users/post_images/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="post-body">
+    2:   <%= attachment_image_tag @post_image, :image %>
+    3:   <p>タイトル：<%= @post_image.title %></p>
+    4:   <p>説明：<%= @post_image.description %></p>
+    5:   <p>ユーザーネーム：<%= @post_image.user.name %></p>
+    6:   <p>投稿日時：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
+  
+app/views/users/post_images/show.html.erb:3:in `_app_views_users_post_images_show_html_erb__862758802434010588_70010787213100'
+Started GET "/users/1" for 133.200.178.64 at 2021-05-11 02:14:53 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/users_controller.rb:6
+  Rendering users/users/show.html.erb within layouts/application
+  Rendered users/users/_info.html.erb (1.4ms)
+  Rendered users/post_images/_form.html.erb (1.9ms)
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."user_id" = ? ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  Rendered users/post_images/_index.html.erb (6.8ms)
+  Rendered users/users/show.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/post_images" for 133.200.178.64 at 2021-05-11 02:20:16 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Users::PostImagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/users/post_images/_index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  Rendered users/post_images/_index.html.erb (321.4ms)
+  Rendered users/post_images/index.html.erb within layouts/application (324.0ms)
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `total_pages' for #<PostImage::ActiveRecord_Relation:0x0000000004d11650>):
+    23:     </div>
+    24:   </div>
+    25:   <% end %>
+    26:   <%= paginate post_images %>
+    27: </div>
+  
+app/views/users/post_images/_index.html.erb:26:in `_app_views_users_post_images__index_html_erb__1089920004118293328_42556560'
+app/views/users/post_images/index.html.erb:1:in `_app_views_users_post_images_index_html_erb___1667189802250602280_42200080'
+Started GET "/users/1" for 133.200.178.64 at 2021-05-11 02:25:47 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by Users::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/users_controller.rb:6
+  Rendering users/users/show.html.erb within layouts/application
+  Rendered users/users/_info.html.erb (291.4ms)
+  Rendered users/post_images/_form.html.erb (18.4ms)
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."user_id" = ? ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  Rendered users/post_images/_index.html.erb (18.7ms)
+  Rendered users/users/show.html.erb within layouts/application (333.2ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 487ms (Views: 451.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/post_images" for 133.200.178.64 at 2021-05-11 02:25:50 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  Rendered users/post_images/_index.html.erb (19.8ms)
+  Rendered users/post_images/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post_images/3" for 133.200.178.64 at 2021-05-11 02:30:51 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  Rendered users/post_images/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="post-body">
+    2:   <%= attachment_image_tag @post_image, :image %>
+    3:   <p>タイトル：<%= @post_image.title %></p>
+    4:   <p>説明：<%= @post_image.description %></p>
+    5:   <p>ユーザーネーム：<%= @post_image.user.name %></p>
+    6:   <p>投稿日時：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
+  
+app/views/users/post_images/show.html.erb:3:in `_app_views_users_post_images_show_html_erb___1550892332665453073_70079539302220'
+Started GET "/" for 133.200.178.64 at 2021-05-11 04:22:14 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (77.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 490ms (Views: 481.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/post_images" for 133.200.178.64 at 2021-05-11 04:22:18 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  Rendered users/post_images/_index.html.erb (45.1ms)
+  Rendered users/post_images/index.html.erb within layouts/application (47.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 140ms (Views: 119.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/attachments/24e8115d799537e96b71b955e85ae97ecd9c23a7/store/a8c457cb86d509fbd72c04f1f303a986a7dc97296a3d9c80acf8404608f1/image" for 133.200.178.64 at 2021-05-11 04:22:19 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/58f3fc24ea1903caaeda42387d0d93939039ab8d/store/3375e3fc7f775a984cefd3047895fe03f29daec16629bfabf0ab362a75f9/image" for 133.200.178.64 at 2021-05-11 04:22:19 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-05-11 04:22:19 +0000] GET "/24e8115d799537e96b71b955e85ae97ecd9c23a7/store/a8c457cb86d509fbd72c04f1f303a986a7dc97296a3d9c80acf8404608f1/image" 200 16.6ms
+
+Refile::App: [2021-05-11 04:22:19 +0000] GET "/58f3fc24ea1903caaeda42387d0d93939039ab8d/store/3375e3fc7f775a984cefd3047895fe03f29daec16629bfabf0ab362a75f9/image" 200 29.7ms
+
+Started GET "/post_images/4" for 133.200.178.64 at 2021-05-11 04:22:21 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  Rendered users/post_images/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `description' for nil:NilClass):
+    1: <div class="post-body">
+    2:   <%= attachment_image_tag @post_image, :image %>
+    3:   <p>タイトル：<%= @post_images.title %></p>
+    4:   <p>説明：<%= @post_image.description %></p>
+    5:   <p>ユーザーネーム：<%= @post_image.user.name %></p>
+    6:   <p>投稿日時：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
+    7:   <% if @post_image.user == current_user %>
+  
+app/views/users/post_images/show.html.erb:4:in `_app_views_users_post_images_show_html_erb__4443841939211232990_69897313831060'
+Started GET "/post_images" for 133.200.178.64 at 2021-05-11 04:22:47 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  Rendered users/post_images/_index.html.erb (26.3ms)
+  Rendered users/post_images/index.html.erb within layouts/application (30.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/post_images" for 133.200.178.64 at 2021-05-11 04:22:48 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/_index.html.erb:10
+  Rendered users/post_images/_index.html.erb (17.0ms)
+  Rendered users/post_images/index.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post_images/4" for 133.200.178.64 at 2021-05-11 04:22:50 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/show.html.erb:5
+  Rendered users/post_images/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users/post_images", :id=>nil}, missing required keys: [:id]):
+     5:   <p>ユーザーネーム：<%= @post_images.user.name %></p>
+     6:   <p>投稿日時：<%= @post_images.created_at.strftime('%Y/%m/%d') %></p>
+     7:   <% if @post_images.user == current_user %>
+     8:     <%= link_to "削除", post_image_path(@post_image), method: :delete %>
+     9:   <% end %>
+    10:     <p>
+    11: </div>
+  
+app/views/users/post_images/show.html.erb:8:in `_app_views_users_post_images_show_html_erb__4443841939211232990_69897317533260'
+Started GET "/post_images/4" for 133.200.178.64 at 2021-05-11 04:23:25 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/show.html.erb:5
+  Rendered users/post_images/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/post_images/4" for 133.200.178.64 at 2021-05-11 04:24:03 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/show.html.erb:6
+  Rendered users/post_images/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 133.200.178.64 at 2021-05-11 04:24:25 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users/users_controller.rb:6
+  Rendering users/users/show.html.erb within layouts/application
+  Rendered users/users/_info.html.erb (2.1ms)
+  Rendered users/post_images/_form.html.erb (17.5ms)
+  [1m[36mPostImage Load (0.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."user_id" = ? ORDER BY "post_images"."id" DESC LIMIT ? OFFSET ?[0m  [["user_id", 1], ["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/users/post_images/_index.html.erb:2
+  Rendered users/post_images/_index.html.erb (7.4ms)
+  Rendered users/users/show.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 100ms (Views: 87.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/post_images/3" for 133.200.178.64 at 2021-05-11 04:24:28 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.4ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/show.html.erb:6
+  Rendered users/post_images/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/post_images/2" for 133.200.178.64 at 2021-05-11 04:24:54 +0000
+Cannot render console from 133.200.178.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::PostImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.1ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users/post_images_controller.rb:20
+  Rendering users/post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/post_images/show.html.erb:6
+  Rendered users/post_images/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
