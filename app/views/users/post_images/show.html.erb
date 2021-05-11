@@ -1,19 +1,19 @@
 <div class="post-body">
-  <%= attachment_image_tag @post_images, :image %>
+  <%= attachment_image_tag @post_image, :image %>
 
-  <p>タイトル：<%= @post_images.title %></p>
-  <p>説明：<%= @post_images.description %></p>
-  <p>ユーザーネーム：<%= @post_images.user.name %></p>
-  <p>投稿日時：<%= @post_images.created_at.strftime('%Y/%m/%d') %></p>
-  <% if @post_images.user == current_user %>
-    <%= link_to "削除", post_images_path(@post_images), method: :delete %>
+  <p>タイトル：<%= @post_image.title %></p>
+  <p>説明：<%= @post_image.description %></p>
+  <p>ユーザーネーム：<%= @post_image.user.name %></p>
+  <p>投稿日時：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
+  <% if @post_image.user == current_user %>
+    <%= link_to "削除", post_images_path(@post_image), method: :delete %>
   <% end %>
     <p>
 </div>
 <div class="comments">
 <p>コメント件数：<%= @post_image.post_comments.count %></p>
 <% @post_image.post_comments.each do |post_comment| %>
-  <p><%= image_tag('sample-author1.jpg') %></p>
+  <p><%= attachment_image_tag(@post_image.user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg") %></p>
   <%= post_comment.user.name %>
   <%= post_comment.created_at.strftime('%Y/%m/%d') %><%= post_comment.comment %>
   <% if post_comment.user == current_user %>
@@ -25,7 +25,7 @@
 
 </div>
 <div class="new-comment">
-<%= form_with(model:[@post_image, @post_comment], local: true) do |f| %>
+<%= form_with model:[@post_image, @post_comment] do |f| %>
   <%= f.text_area :comment, rows:'5',placeholder: "コメントをここに" %>
   <%= f.submit "送信する" %>
 <% end %>
