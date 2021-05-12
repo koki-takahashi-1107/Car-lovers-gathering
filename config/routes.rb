@@ -10,10 +10,17 @@ Rails.application.routes.draw do
     }
 
   scope module: :users do
-    resources :users, only: [:index, :show, :edit, :update]
+    resources :users, only: [:index, :show, :edit, :update] do
+     member do
+        get :following, :followers
+       end
+     resource :relationships, only: [:create, :destroy]
+   end
+
     resources :post_images, only: [:new, :create, :index, :show, :destroy] do
        resource :favorites, only: [:create, :destroy]
-      
+
+
       resources :post_comments, only: [:create, :destroy]
    end
   end
