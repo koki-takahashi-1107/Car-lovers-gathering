@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
     resources :post_images, only: [:new, :create, :index, :show, :destroy] do
      resources :tags do
-     # get 'posts_image', to: 'posts#search'
+      get 'posts_image', to: 'posts#search'
      end
      resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]

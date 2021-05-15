@@ -9,7 +9,7 @@ class Users::PostImagesController < ApplicationController
   def create
     @post_image = PostImage.new(post_image_params)
     @post_image.user_id = current_user.id
-    tag_list = params[:post_image][:tag_name].split(nil)  
+    tag_list = params[:post_image][:tag_name].split(nil)
     if @post_image.save
        @post_image.save_tag(tag_list)
       redirect_to post_images_path
@@ -21,7 +21,7 @@ class Users::PostImagesController < ApplicationController
   def show
     @post_image = PostImage.find(params[:id]) #クリックした投稿を習得
     @post_comment = PostComment.new
-    @post_tags = @post_image.tags 
+    @post_tags = @post_image.tags
   end
 
   def index
@@ -59,5 +59,11 @@ class Users::PostImagesController < ApplicationController
       redirect_to post_images_path
     end
   end
-  
+
+  def search
+    @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
+    @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
+    @post_images = @tag.posts.all           #クリックしたタグに紐付けられた投稿を全て表示
+  end
+
 end

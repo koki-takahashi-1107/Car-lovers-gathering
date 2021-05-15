@@ -1,4 +1,12 @@
 <div class="card-list-containar py-5">
+  <h3>タグリスト</h3>
+  <% @tag_list.each do |list| %>
+  <span>
+    <%= link_to list.tag_name, post_images_path(tag_id: list.id) %>
+    <%= "(#{list.post_images.count})" %>
+  </span>
+  <% end %>
+  <h3>投稿一覧</h3>
   <% post_images.each do |post_image| %>
   <div class="card w-50 mx-auto mt-4 shadow-lg">
     <%= link_to post_image_path(post_image.id) do %>
@@ -26,27 +34,3 @@
   <% end %>
   <%= paginate post_images %>
 </div>
-
-<h3>タグリスト</h3>
-<% @tag_list.each do |list| %>
-  <span>
-    <%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
-    <%= "(#{list.posts.count})" %>
-　</span>
-hr
-　
-h3 投稿する
-= form_with(model: @post, url: posts_path, local: true) do |f|
-  = f.text_area :content
-  br
-  = "スペースを入力することで複数のタグを付けることができます。"
-  = "例：音楽 文芸 スポーツ"
-  = f.text_field :tag_name
-  br
-  = f.submit
-　
-hr
-　
-h3 投稿一覧
-- @posts.each do |post|
-    = link_to post.content, post

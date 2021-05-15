@@ -6,6 +6,7 @@ class Users::UsersController < ApplicationController
     @user = User.find(params[:id])
     @post_image = PostImage.new
     @post_images = @user.post_images.page(params[:page]).reverse_order
+    @tag_list = Tag.all
   end
 
   def index
@@ -30,6 +31,20 @@ class Users::UsersController < ApplicationController
      render :edit
     end
   end
+
+  def following
+    @user = User.find(params[:id])
+    @users = @user.followings
+    @followings = @user.followings.all
+
+  end
+
+  def followers
+    @user = User.find(params[:id])
+    @users = @user.followers
+    @followers = @user.followers.all
+  end
+
 
   private
   def user_params

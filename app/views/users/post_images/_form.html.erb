@@ -9,6 +9,11 @@
     <p><%= f.label :description %></p>
     <%= f.text_area :description, class: 'form-control post_images_escription' %>
   </div>
+  </br>
+  <%= "半角スペースを入力することで複数のタグを付けることができます。" %>
+  <%= "例：整備 カスタム 洗車" %>
+  <%= f.text_field :tag_name %>
+  </br>
   <div class="form-group">
     <%= f.submit class: 'btn btn-success' %>
   </div>
