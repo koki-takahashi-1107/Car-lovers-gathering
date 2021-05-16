@@ -6,6 +6,10 @@
   <p>説明：<%= @post_image.description %></p>
   <p>ユーザーネーム：<%= @post_image.user.name %></p>
   <p>投稿日時：<%= @post_image.created_at.strftime('%Y/%m/%d') %></p>
+   <% @post_tags.each do |list| %>
+    <p><%= link_to list.tag_name, post_images_path(tag_id: list.id) %>
+    <%= "(#{list.post_images.count})" %></p>
+  <% end %>
   <% if @post_image.user == current_user %>
     <%= link_to "削除", post_image_path(@post_image), method: :delete %>
   <% end %>
