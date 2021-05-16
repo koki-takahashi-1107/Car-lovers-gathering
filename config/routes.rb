@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   get 'homes/about'
   devise_for :admins
 
+  namespace :admin do
+    resources :users,only: [:index,:show,:edit,:update]
+   	resources :post_images,only: [:index,:new,:create,:show,:edit,:update,]
+   	get 'top'=>'post_images#top'
+    end
+
   devise_for :users,:controllers => {
       :sessions => "users/sessions",
       :registrations => "users/registrations",
