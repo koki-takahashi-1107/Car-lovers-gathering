@@ -10,7 +10,8 @@
         <% if user_signed_in? %>
           <li><%= link_to ' ホーム',user_path(current_user),class: 'fas fa-home nav-link text-light' %></li>
           <li><%= link_to ' ユーザー一覧',users_path,class: 'fas fa-users nav-link text-light' %></li>
-          <li><%= link_to ' 投稿一覧',post_images_path ,class: 'fas fa-car nav-link text-light'%></li>
+          <li><%= link_to ' 投稿一覧',post_images_path,class: 'fas fa-car nav-link text-light'%></li>
+          <li><%= link_to ' 投稿フォーム ', new_post_image_path,class: 'fa fa-pen nav-link text-light' %></li>
           <li><%= link_to ' ログアウト', destroy_user_session_path, method: :delete,class: 'fas fa-sign-out-alt nav-link text-light' %></li>
         <% elsif admin_signed_in? %>
           <li><%= link_to ' 管理者ホーム',admin_top_path(current_user),class: 'fas fa-home nav-link text-light' %></li>

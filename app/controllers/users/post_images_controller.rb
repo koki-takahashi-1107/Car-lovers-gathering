@@ -63,7 +63,7 @@ class Users::PostImagesController < ApplicationController
   def search
     @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
     @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
-    @post_images = @tag.posts.all           #クリックしたタグに紐付けられた投稿を全て表示
+    @post_images = @tag.post_images.all           #クリックしたタグに紐付けられた投稿を全て表示
   end
 
 end
