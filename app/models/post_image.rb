@@ -20,7 +20,7 @@ class PostImage < ApplicationRecord
     new_tags = sent_tags - current_tags
 
     old_tags.each do |old|
-      self.tags.delete Tag.find_by(tag_name: old)
+      self.post_image_tags.delete Tag.find_by(tag_name: old)
     end
 
     new_tags.each do |new|
@@ -28,7 +28,7 @@ class PostImage < ApplicationRecord
       self.tags << new_post_image_tag
     end
    end
-   
+
    def self.looks(search, word)
     if search == "perfect_match"
       @post_image = PostImage.where("title LIKE?","#{word}")
