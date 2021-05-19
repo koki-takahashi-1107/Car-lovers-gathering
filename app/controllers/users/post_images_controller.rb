@@ -35,11 +35,19 @@ class Users::PostImagesController < ApplicationController
      @post_image = PostImage.find(params[:id])
      @users = current_user
      if @post_image.user == current_user
-      render "edit"
+      render :edit
      else
       redirect_to post_images_path
      end
   end
+
+   def update
+    if @post_image.update(post_image_params)
+      redirect_to post_image_path(@post_image), notice: "内容更新しました。"
+    else
+      render "edit"
+    end
+   end
 
   def destroy
     @post_image = PostImage.find(params[:id])

@@ -22,6 +22,9 @@
                 <th>
                     <%= user.introduction %>
                 </th>
+                <th>
+                    <%= link_to 'Show', user_path(user) %>
+                </th>
             </tr>
         </tbody>
     <% end %>
@@ -35,17 +38,22 @@
                 <th>Opinion</th>
             </tr>
         </thead>
-        <% @datas.each do |book| %>
+        <% @datas.each do |post_image| %>
         <tbody>
             <tr>
                 <th>
-                    <%= attachment_image_tag(book.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40') %>
+                    <%= attachment_image_tag(post_image.user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40') %>
+
                 </th>
                 <th>
-                    <%= book.title %>
+                    <%= post_image.title %>
                 </th>
                 <th>
-                    <%= book.description %>
+                    <%= post_image.description %>
+                </th>
+                <th>
+                    <%= link_to '詳細ページ', post_image_path(post_image.id) %>
+                    
                 </th>
             </tr>
         </tbody>
