@@ -23,13 +23,13 @@ Rails.application.routes.draw do
      resource :relationships, only: [:create, :destroy]
    end
 
-    resources :post_images, only: [:new, :create, :index, :show, :edit, :update :destroy] do
+    resources :post_images, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
      resources :tags do
       get 'posts_image', to: 'posts#search'
      end
      resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
-   end
-   end
+    end
   get '/search' => 'search#search'
-end
+  end
+ end
