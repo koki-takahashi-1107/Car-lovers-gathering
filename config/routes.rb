@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'goods/search'
   root 'homes#top'
   get 'homes/about'
   devise_for :admins
@@ -32,4 +33,5 @@ Rails.application.routes.draw do
     end
   get '/search' => 'search#search'
   end
+  get '/rakuten' => 'goods#search'
  end

@@ -8,6 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
+          <li><%= link_to '楽天市場検索',rakuten_path,class: 'fas fa-shopping-cart nav-link text-light' %></li>
           <li><%= link_to ' ホーム',user_path(current_user),class: 'fas fa-home nav-link text-light' %></li>
           <li><%= link_to ' ユーザー一覧',users_path,class: 'fas fa-users nav-link text-light' %></li>
           <li><%= link_to ' 投稿一覧',post_images_path,class: 'fas fa-car nav-link text-light'%></li>
