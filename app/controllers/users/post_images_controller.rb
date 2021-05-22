@@ -42,7 +42,7 @@ class Users::PostImagesController < ApplicationController
 
    def update
     if @post_image.update(post_image_params)
-      redirect_to amin_post_image_path(@post_image), notice: "内容更新しました。"
+      redirect_to post_image_path(@post_image), notice: "内容更新しました。"
     else
       render "edit"
     end

@@ -12,7 +12,7 @@
         </ul>
       </div>
       <% end %>
-      <%= form_with model:@post_image,local:true do |f| %>
+      <%= form_with model:@post_image,url:admin_post_image_path(@post_image),local:true do |f| %>
       <%= f.attachment_field :image, class: "w-100" %>
         <div class="form-group">
           <%= f.label :title %>
@@ -27,7 +27,7 @@
         </div>
       <% end %>
     	<%= render 'layouts/errors', obj: @post_image %>
-  		<%= link_to '投稿詳細', post_image_path(@post_image), class: "post_image_#{@post_image.id}" %>
+  		<%= link_to '投稿詳細', admin_post_image_path(@post_image), class: "post_image_#{@post_image.id}" %>
   		<%= link_to '戻る', post_images_path, class: "back" %>
   </div>
 </div>
