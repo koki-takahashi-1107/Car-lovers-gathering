@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users,only: [:index,:show,:edit,:update]
-   	resources :post_images,only: [:index,:new,:create,:show,:edit,:update,]
+   	resources :post_images,only: [:index,:new,:create,:show,:edit,:update,:destroy]
    	get 'top'=>'post_images#top'
     end
 
@@ -25,12 +25,10 @@ Rails.application.routes.draw do
    end
 
     resources :post_images, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
-     resources :tags do
-      get 'posts_image', to: 'posts#search'
-     end
      resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
     end
+    get "post_images/tags/:tag_id",to:"post_images#search",as:"post_images_tag"
   get '/search' => 'search#search'
   end
   get '/rakuten' => 'goods#search'

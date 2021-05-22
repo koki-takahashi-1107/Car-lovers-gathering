@@ -1,11 +1,13 @@
 <% if goods.present? %>
-  <% goods.first(10).each do |good| %>
-    <div class="list">
+  <% goods.first(100).each do |good| %>
+    <div class="container-list">
+      <div class="row">
     <% if good["smallImageUrls"][0].present? %>
-      <%= link_to (image_tag(good["smallImageUrls"][0], style: "width: 70px;height: 100px;display: inline-block;")), good.url %>
-      <%end%>
-
-      <%= good.name %>
+       <div class="image"><%= link_to (image_tag(good["smallImageUrls"][0], style: "width: 70px;height: 100px;display: inline-block;")), good.url %></div>
+    <%end%>
+        <div class="content-title">
+          <h2><%= good.name %></h2>
+        </div>
     </div>
   <% end %>
 <% end %>
