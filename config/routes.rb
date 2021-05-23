@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]
     end
     get "post_images/tags/:tag_id",to:"post_images#search",as:"post_images_tag"
+   end
   get '/search' => 'search#search'
-  end
   get '/rakuten' => 'goods#search'
  end

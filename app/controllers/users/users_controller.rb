@@ -1,6 +1,7 @@
 class Users::UsersController < ApplicationController
    before_action :authenticate_user!
    before_action :ensure_correct_user, only: [:edit, :update]
+  
 
   def show
     @user = User.find(params[:id])
@@ -45,7 +46,6 @@ class Users::UsersController < ApplicationController
     @followers = @user.followers.all
   end
 
-
   private
   def user_params
     params.require(:user).permit(:name, :introduction, :profile_image)
@@ -57,6 +57,5 @@ class Users::UsersController < ApplicationController
       redirect_to user_path(current_user)
     end
   end
-
 
 end

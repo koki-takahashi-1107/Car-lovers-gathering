@@ -24,12 +24,6 @@
   box-sizing: border-box;
   }
 
-
-
-  .image-top-mask {
-   background-color: rgba( 0, 0, 0, 0.5);
-  }
-
   .field {
    color: #fff;
   }
@@ -90,7 +84,7 @@ h3 {
 
   .box .bgImg {
     position   : absolute;
-    width  : 100%;
+    width      : 100%;
     height     : 100%;
     top        : 0;
     left       : 0;
