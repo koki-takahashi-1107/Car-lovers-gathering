@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require_self 
+ *= require_self
  */
   @import "bootstrap";
   @import 'font-awesome-sprockets';
@@ -24,14 +24,7 @@
   box-sizing: border-box;
   }
 
-  .image-top {
-   background-image: image-url('porsch.jpg');
-   width: 100%;
-   height: 400px;
-   background-size: cover;
-   background-position: 55% 25%;
-   margin-left: 0;
-  }
+
 
   .image-top-mask {
    background-color: rgba( 0, 0, 0, 0.5);
@@ -86,4 +79,48 @@ li {
 
 h3 {
  color: #fff;
+}
+
+
+.box {
+    position   : relative;
+    width  : 100vw;
+    height     : 100vh;
+  }
+
+  .box .bgImg {
+    position   : absolute;
+    width  : 100%;
+    height     : 100%;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+    opacity    : 0;
+    background-size: cover;
+    animation  : bgAnime 20s infinite;
+}
+
+.box .src1 {
+  background-image : image-url('porsche.jpg');
+}
+.box .src2 {
+  background-image : image-url('Maintenance.jpg');
+  animation-delay  : 5s;
+}
+.box .src3 {
+  background-image : image-url('tool.jpg');
+  animation-delay  : 10s;
+}
+.box .src4 {
+  background-image : image-url('wheel.jpg');
+  animation-delay  : 15s;
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
 }
