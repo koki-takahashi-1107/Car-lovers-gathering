@@ -3,3 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+h2 {
+　　color: #fff;
+    }
+
+h2:before {
+    content: '●';
+    color: white;
+    margin-right: 8px;
+    }
