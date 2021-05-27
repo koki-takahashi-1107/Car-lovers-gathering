@@ -2,24 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.card-list-containar {
+.card-list-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.card-body {
-    display: flex;
-}
 
 .w-30 {
     width: 30% !important;
 }
 
-.post-body {
-    position: center;
-}
 
-.p-4 {
-    background-color: white;
+li {
+    color: #fff;
 }

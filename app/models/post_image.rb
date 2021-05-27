@@ -43,4 +43,6 @@ class PostImage < ApplicationRecord
     end
    end
 
+  validates :image, presence: true
+  validates :title, presence: true
 end
