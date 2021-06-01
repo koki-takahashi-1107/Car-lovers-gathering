@@ -11,7 +11,10 @@ class Users::PostImagesController < ApplicationController
     @post_image.user_id = current_user.id
     tag_list = params[:post_image][:tag_name].split(nil)
     if @post_image.save
-       @post_image.save_tag(tag_list)
+       tags = Vision.get_image_data(@post_image.image)
+       pp tag_list
+       pp tags
+       @post_image.save_tag(tag_list+tags)
       redirect_to post_images_path
     else
       render "new"

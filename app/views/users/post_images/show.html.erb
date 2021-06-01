@@ -35,7 +35,9 @@
             </span>
           <% end %>
           <% end %>
-
+         <% @post_image.tags.each do |tag| %>
+           <%= tag.tag_name %>
+           <% end %>
 
         </div>
       </div>
