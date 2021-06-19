@@ -29,13 +29,11 @@ class Users::PostImagesController < ApplicationController
 
   def index
     @post_images = PostImage.page(params[:page]).reverse_order
-    @post_image = PostImage.new
     @tag_list = Tag.all
   end
 
   def edit
     @post_image = PostImage.find(params[:id])
-    @users = current_user
    if @post_image.user == current_user
     render "edit"
    else
