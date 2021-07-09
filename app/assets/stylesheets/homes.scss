@@ -6,7 +6,7 @@
 .text-about {
   font-size: 20px;
   background-image: image-url('tools-1845426_1920');
-  widht: aouto;
+  widht: center;
   height: 700px
 
 }
@@ -17,5 +17,6 @@ h1 {
 
 .text-about p {
   text-align: center;
-  color: cyan;
+  color: #ff0068;
+  -webkit-user-modify: read-write-plaintext-only;
 }
